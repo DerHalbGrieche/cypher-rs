@@ -1,0 +1,5 @@
+tdes_key: "your-3des-key-here000000"
+iv: "cypheriv"
+public_key_path: "config/public_key.pem"
+private_key_path: "config/private_key.pem"
+keymaps_path: "config/keys.yaml"
