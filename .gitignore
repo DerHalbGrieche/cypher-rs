@@ -1,6 +1,8 @@
 debug/
 target/
 
+result
+.direnv/
 **/*.rs.bk
 
 *.pdb

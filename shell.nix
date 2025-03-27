@@ -4,6 +4,8 @@
   rustfmt,
   clippy,
   lldb,
+  perl,
+  openssl,
   ...
 }: let
   mainPkg = callPackage ./default.nix {};
@@ -16,7 +18,10 @@ in
         rustfmt
         clippy
         lldb
+        perl
       ]
       ++ (oa.nativeBuildInputs or []);
+
+      propagatedBuildInputs = [ openssl ];
 
   })

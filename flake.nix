@@ -1,5 +1,5 @@
 {
-  description = "Foo Bar Rust Project";
+  description = "cypher-rs";
 
   inputs = {nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";};
 
