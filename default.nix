@@ -13,5 +13,4 @@ rustPlatform.buildRustPackage {
     pkgs.perl
   ];
 
-  buildInputs = [pkgs.openssl];
 }

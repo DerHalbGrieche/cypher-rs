@@ -1,11 +1,9 @@
-use clap::Command;
-
 use crate::matching::Cipher;
 
 pub struct Atbash;
 
 impl Atbash {
-    fn transform(text: &str) -> String {
+    pub fn transform(text: &str) -> String {
         text.chars()
             .map(|c| {
                 if c.is_ascii_alphabetic() {
@@ -18,19 +16,13 @@ impl Atbash {
             })
             .collect()
     }
-    pub fn encrypt(text: &str) -> String {
-        Self::transform(text)
-    }
-    pub fn decrypt(text: &str) -> String {
-        Self::transform(text)
-    }
 }
 
 impl Cipher for Atbash {
     fn encrypt(text: &str) -> String {
-        Atbash::encrypt(text)
+        Atbash::transform(text)
     }
     fn decrypt(text: &str) -> String {
-        Atbash::decrypt(text)
+        Atbash::transform(text)
     }
 }

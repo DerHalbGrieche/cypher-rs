@@ -1,13 +1,9 @@
-use std::fs::File;
-use std::io::Read;
-use std::primitive;
-
-use crate::base64::Base64;
 use crate::config::Config;
 use crate::matching::Cipher;
 use openssl::base64::{decode_block, encode_block};
-use openssl::pkey::PKey;
 use openssl::rsa::{Padding, Rsa};
+use std::fs::File;
+use std::io::Read;
 
 pub struct RsaCommand {
     public_key: Rsa<openssl::pkey::Public>,
